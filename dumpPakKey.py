@@ -80,7 +80,7 @@ if len(sys.argv) > 1:
 			## Add manualy initial offset to array
 			offsetArray.append(offset)
 
-			## Getting offset section 47 bytes(where are key stored), up and down from initial match 46 + initial offset = 47
+			## Getting offset section (where are key stored), up and down from initial match
 			incrementOffset(offset, 45)
 			decrementOffset(offset, 11)
 
