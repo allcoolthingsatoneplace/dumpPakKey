@@ -1,6 +1,6 @@
 # dumpPakKey [tool] [win64] for dumping *.pak base64 key for Unreal Engine 4
 
-**1st** you need to download fresh python for Windows -> [Python/Releases](https://www.python.org/downloads/release) andinstall it
+**1st** you need to download fresh python for Windows -> [Python/Releases](https://www.python.org/downloads/release) and install it
 **[ ! ]** don't forget to check (include to PATH) option in checkbox, then open cmd (Win+R type cmd, Enter) and type:
 ```
 pip install pyinstaller
