@@ -50,4 +50,4 @@ Have fun!)
 
 **NOTICE:** It was created "for science purposes only" in order to dump real life projects, you need to be shure they arent obfuscated by their loaders witch most of games have
 
-**NOTICE:** Pattern used to find key section may change in other unreal engine build's, and you will need to manually change pattern, and rebuild *.py to exe
+**NOTICE:** Pattern used to find key section may change in other unreal engine build's, and you will need to manually change pattern, and rebuild *.py to *.exe
