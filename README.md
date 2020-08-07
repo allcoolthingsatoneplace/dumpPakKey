@@ -45,6 +45,9 @@ UnrealPak.exe name_of_your_game-WindowsNoEditor.pak -cryptokeys=Crypto.json
 Have fun!)
 ![dumpPakKey](https://i.imgur.com/EzIsUQk.png)
 ###### builded *.exe is here -> https://github.com/somethingcoolmustbehere/dumpPakKey/releases
+
 **NOTICE:** It was successfully tested in created (Shipping mode) projects in UE4 4.25.3
+
 **NOTICE:** It was created "for science purposes only" in order to dump real life projects, you need to be shure they arent obfuscated by their loaders witch most of games have
+
 **NOTICE:** Pattern used to find key section may change in other unreal engine build's, and you will need to manually change pattern, and rebuild *.py to exe
