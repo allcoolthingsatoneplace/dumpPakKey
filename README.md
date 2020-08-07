@@ -1,7 +1,7 @@
 # dumpPakKey [tool] [win64] for dumping *.pak base64 key for Unreal Engine 4
 
 **1st** you need to download fresh python for Windows -> [Python/Releases](https://www.python.org/downloads/release) andinstall it
-**[!]** don't forget to check (include to PATH) option in checkbox, then open cmd (Win+R type cmd, Enter) and type:
+**[ ! ]** don't forget to check (include to PATH) option in checkbox, then open cmd (Win+R type cmd, Enter) and type:
 ```
 pip install pyinstaller
 ```
@@ -9,8 +9,8 @@ after successful install, in your cmd type:
 ```
 pyinstaller dumpPakKey.py -F 
 ```
-**[!]** make sure you are at the same directory where [dumpPakKey.py](https://raw.githubusercontent.com/somethingcoolmustbehere/dumpPakKey/master/dumpPakKey.py) is... 
-**[i]** switch directory  in cmd.
+**[ ! ]** make sure you are at the same directory where [dumpPakKey.py](https://raw.githubusercontent.com/somethingcoolmustbehere/dumpPakKey/master/dumpPakKey.py) is... 
+**[ i ]** switch directory  in cmd.
 ```
 cd \DirectoryName\dumpPakKey.py
 ```
@@ -19,8 +19,8 @@ to run your (created with PyInstaller) *.exe open cmd , cd to path where your *.
 ```
 dumpPakKey.exe name_of_your_game-Shipping.exe
 ```
-**[i]** copy your created key (Ctrl+C)
-**[i]** then paste (Ctrl+V) your copied key to your [Crypto.json](https://raw.githubusercontent.com/somethingcoolmustbehere/UnrealPakTool/master/Crypto.json).
+**[ i ]** copy your created key (Ctrl+C)
+**[ i ]** then paste (Ctrl+V) your copied key to your [Crypto.json](https://raw.githubusercontent.com/somethingcoolmustbehere/UnrealPakTool/master/Crypto.json).
 
 open/edit your [Crypto.json](https://raw.githubusercontent.com/somethingcoolmustbehere/UnrealPakTool/master/Crypto.json).
 in EncryptionKey section of your [Crypto.json](https://raw.githubusercontent.com/somethingcoolmustbehere/UnrealPakTool/master/Crypto.json) file:
