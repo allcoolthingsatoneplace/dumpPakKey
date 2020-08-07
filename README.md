@@ -44,7 +44,8 @@ UnrealPak.exe name_of_your_game-WindowsNoEditor.pak -cryptokeys=Crypto.json
 ```
 Have fun!)
 ![dumpPakKey](https://i.imgur.com/EzIsUQk.png)
-###### builded *.exe is here -> https://github.com/somethingcoolmustbehere/dumpPakKey/releases
+###### builded *.exe is here -> [dumpPakKey
+.exe](https://github.com/somethingcoolmustbehere/dumpPakKey/releases)
 
 **NOTICE:** It was successfully tested in created (Shipping mode) projects in UE4 4.25.3
 
