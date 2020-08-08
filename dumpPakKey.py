@@ -112,7 +112,6 @@ if len(sys.argv) > 1:
         else:
             print(errorGenKey)
         ## Json pattern generation
-
         data = {}
         types = {}
         EncryptionKey = {}
