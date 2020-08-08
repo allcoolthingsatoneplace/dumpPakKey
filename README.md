@@ -20,24 +20,6 @@ to run your (created with PyInstaller) *.exe open cmd , cd to path where your *.
 ```
 dumpPakKey.exe name_of_your_game-Shipping.exe
 ```
-**[ i ]** copy your created key (Ctrl+C)
-
-**[ i ]** then paste (Ctrl+V) your copied key to your [Crypto.json](https://raw.githubusercontent.com/somethingcoolmustbehere/UnrealPakTool/master/Crypto.json).
-
-open/edit your [Crypto.json](https://raw.githubusercontent.com/somethingcoolmustbehere/UnrealPakTool/master/Crypto.json).
-
-in EncryptionKey section of your [Crypto.json](https://raw.githubusercontent.com/somethingcoolmustbehere/UnrealPakTool/master/Crypto.json) file:
-```json
-"EncryptionKey":
-  {
-      "$type":"2",
-      "Name":"null",
-      "Guid":"null",
-      "Key":"Your Base64 key here"
-  },
-```
-"Your Base64 key here" paste your generated key (in the middle of " "), save file.
-
 then in cmd run:
 ```
 UnrealPak.exe name_of_your_game-WindowsNoEditor.pak -cryptokeys=Crypto.json
