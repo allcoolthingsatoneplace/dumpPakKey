@@ -11,6 +11,7 @@ after successful install, in your cmd type:
 pyinstaller dumpPakKey.py -F 
 ```
 **[ ! ]** make sure you are at the same directory where [dumpPakKey.py](https://raw.githubusercontent.com/somethingcoolmustbehere/dumpPakKey/master/dumpPakKey.py) is... 
+
 **[ i ]** switch directory  in cmd.
 ```
 cd \DirectoryName\dumpPakKey.py
