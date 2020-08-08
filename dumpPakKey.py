@@ -21,7 +21,7 @@ errorData = "[!] File specified doesn't exist, please proceed a valid file."
 errorOffset = "[!] Something went wrong, no offset value has been set."
 errorDumpKey = "[!] Something went wrong, can't dump bytes to array."
 errorGenKey = "[!] Something went wrong, can't generate key."
-errorData = "[!] Something went wrong, can't create Crypto.json file."
+errorCryptoData = "[!] Something went wrong, can't create Crypto.json file."
 ##
 
 ## Function section
@@ -144,7 +144,7 @@ if len(sys.argv) > 1:
                 Crypto.close()
                 print("[i] Crypto.json was successfuly created with your dumped (Base64) key in it.")
         else:
-            print(errorData)
+            print(errorCryptoData)
     else:
         print(errorData)        
 else:
