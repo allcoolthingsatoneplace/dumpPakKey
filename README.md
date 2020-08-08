@@ -22,7 +22,7 @@ to run your (created with PyInstaller) *.exe open cmd , cd to path where your *.
 dumpPakKey.exe name_of_your_game-Shipping.exe
 ```
 
-or just drag and drop your *.exe file on dumpPakKey.exe it will automatically create Crypto.json for you.
+or just drag and drop your *.exe file on [dumpPakKey.exe](https://github.com/somethingcoolmustbehere/dumpPakKey/releases/download/unreal-engine-utilities/dumpPakKey.exe) it will automatically create Crypto.json for you.
 
 then in cmd run:
 ```
