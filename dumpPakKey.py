@@ -3,11 +3,13 @@ import sys
 import codecs
 import binascii
 import os
+import pyperclip
 import json
 
 ## Pattern section
 initPattern = b'\x48\x8D\x41\x1F\xC7\x45\xD8'
-junkPattern = ["c745d4", "488d411fc745d8", "c745dc", "c745e0", "c745e4", "c745e8", "c745ec"]
+junkPattern = ["c745d4", "488d411fc745d8", "c745dc",
+    "c745e0", "c745e4", "c745e8", "c745ec"]
 ##
 
 ## Array section
@@ -22,23 +24,27 @@ errorOffset = "[!] Something went wrong, no offset value has been set."
 errorDumpKey = "[!] Something went wrong, can't dump bytes to array."
 errorGenKey = "[!] Something went wrong, can't generate key."
 errorCryptoData = "[!] Something went wrong, can't create Crypto.json file."
+errorB64toBytes = "[!] Something went wrong, can't convert string to bytes."
 ##
 
 ## Function section
 
+
 def incrementOffset(offset, jumpBytes):
     for i in range(0, jumpBytes):
         i = int(offset, 16)
-        i +=1                   
+        i += 1
         offset = hex(i)
         offsetArray.append(offset)
+
 
 def decrementOffset(offset, jumpBytes):
     for i in range(0, jumpBytes):
         i = int(offset, 16)
-        i -=1                 
+        i -= 1
         offset = hex(i)
         offsetArray.append(offset)
+
 
 def DumpKeyBlock():
     for offset in offsetArray:
@@ -48,18 +54,20 @@ def DumpKeyBlock():
         keyData = binascii.hexlify(keyData)
         dumpKeySectionList.append(keyData.decode('utf-8'))
 
+
 def cleanGenKey(junkHex, hexBlock):
     cleanHex = hexBlock
     for trash in junkHex:
         cleanHex = re.sub(trash, '', cleanHex)
 
-    print ("[i] Pure [hex] key extracted: " + cleanHex)
+    print("[i] Pure [hex] key extracted: " + cleanHex)
 
     b64 = codecs.encode(codecs.decode(cleanHex, 'hex'), 'base64').decode()
 
     return b64
 
 ##
+
 
 ## argv contains data?!
 if len(sys.argv) > 1:
@@ -69,14 +77,14 @@ if len(sys.argv) > 1:
 
     ## Checking if file in argv exists, exec.
     if filePath:
-        
+
         f = open(fileName, "rb")
         data = f.read()
         regex = re.compile(initPattern)
         for match_obj in regex.finditer(data):
             offset = match_obj.start()
 
-            print ("[i] Pattern match found, our initial offset is: " + hex(offset))
+            print("[i] Pattern match found, our initial offset is: " + hex(offset))
 
             offset = hex(offset)
             ## Add manualy initial offset to array
@@ -88,7 +96,7 @@ if len(sys.argv) > 1:
 
             ## Sortnig your offsets by increase (dafault sort option)
             offsetArray.sort()
-        
+
             print("[i] Retreaving key offset section.")
             print(*offsetArray)
 
@@ -137,12 +145,21 @@ if len(sys.argv) > 1:
         data['PakEncryptionRequired'] = "true"
         data['PakSigningRequired'] = "true"
         data['SecondaryEncryptionKeys'] = "[ ]"
-        ##             
+        ##
         if b64:
                 Crypto = open('Crypto.json', 'w', encoding='utf-8')
-                json.dump(data, Crypto, ensure_ascii=False, indent=4, sort_keys=True)
+                json.dump(data, Crypto, ensure_ascii=False,
+                          indent=4, sort_keys=True)
                 Crypto.close()
-                print("[i] Crypto.json was successfuly created with your dumped (Base64) key in it.")
+                print(
+                    "[i] Crypto.json was successfuly created with your dumped (Base64) key in it.")
+                b64likebytes = str.encode(b64)
+                if b64likebytes:
+                    hexToClipboard = codecs.encode(codecs.decode(b64likebytes, 'base64'), 'hex').decode()
+                    pyperclip.copy("0x" + hexToClipboard.upper())
+                    print("[i] Raw [hex] key was added to your clipboard aka (Ctrl+V) where you want.")
+                else:
+                    print(errorB64toBytes)
         else:
             print(errorCryptoData)
     else:
