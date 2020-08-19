@@ -30,7 +30,7 @@ UnrealPak.exe name_of_your_game-WindowsNoEditor.pak -cryptokeys=Crypto.json
 ```
 or use [*.bat file](https://github.com/somethingcoolmustbehere/UnrealPakTool/blob/master/UnrealPakExtractCrypto.bat)
 
-[UnrealPakTool](https://github.com/somethingcoolmustbehere/UnrealPakTool/releases/download/unreal-engine-utilities/UnrealPakTool.7z)
+[UnrealPakTool](https://github.com/somethingcoolmustbehere/UnrealPakTool)
 
 [UEViewer](https://github.com/gildor2/UEViewer)
 
