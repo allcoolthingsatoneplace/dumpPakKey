@@ -33,7 +33,7 @@ or use [*.bat file](https://github.com/somethingcoolmustbehere/UnrealPakTool/blo
 [UnrealPakTool](https://github.com/somethingcoolmustbehere/UnrealPakTool/releases/download/unreal-engine-utilities/UnrealPakTool.7z)
 
 Have fun!)
-![dumpPakKey](https://i.imgur.com/mXLhUtS.png?1)
+![dumpPakKey](https://i.imgur.com/3db3AD3.png?1)
 ###### builded *.exe is here -> [dumpPakKey.exe](https://github.com/somethingcoolmustbehere/dumpPakKey/releases)
 
 **NOTICE:** It was successfully tested in created (Shipping mode) projects in UE4 4.25.3
